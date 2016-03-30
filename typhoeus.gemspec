@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.rubyforge_project = '[none]'
 
-  s.add_runtime_dependency 'mime-types', ['>= 0']
+  s.add_runtime_dependency 'mime-types', ['1.16']
   s.add_development_dependency 'rspec', ["~> 2.6"]
   s.add_development_dependency 'diff-lcs', [">= 0"]
   s.add_development_dependency 'sinatra', [">= 0"]
