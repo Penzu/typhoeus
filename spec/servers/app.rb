@@ -4,8 +4,6 @@ require 'sinatra'
 require 'json'
 require 'zlib'
 
-set :logging, false
-
 @@fail_count = 0
 
 post '/file' do
@@ -85,13 +83,16 @@ head '/**' do
 end
 
 put '/**' do
+  puts request.inspect
   request.env.merge!(:body => request.body.read).to_json
 end
 
 post '/**' do
+  puts request.inspect
   request.env.merge!(:body => request.body.read).to_json
 end
 
 delete '/**' do
+  puts request.inspect
   request.env.merge!(:body => request.body.read).to_json
 end
